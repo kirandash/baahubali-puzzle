@@ -1,0 +1,179 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Home Page */
+body#home {
+	margin: 0;
+    background: url(../images/first-look.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+body#home:after {
+	content: '';
+	position: absolute;
+	background: rgba(0,0,0,0.9);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#wrapper {
+	position: relative;
+	z-index: 1;
+}
+
+.gameBoard {
+	width: 1000px;
+	height: 450px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.dragBoard, .targetBoard  {
+	width: 450px;
+	height: 450px;
+	top: 0;
+	position: absolute;
+}
+
+.dragBoard  {
+	left: 0;
+}
+
+.targetBoard  {
+	left: 500px;
+}
+
+.instruction {
+	width: 450px;
+	margin: 0 auto;	
+	text-align: center;
+}
+
+.instruction p {
+	background: -webkit-linear-gradient(#f7eed3, #975a17);
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 11px 0px;
+    color: #f4cd92;
+    position: relative;
+    font-family: acclaim;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 14px;   
+    line-height: 20px; 
+}
+
+.dragItem {
+	float: left;
+}
+
+.columnOne {
+	position: absolute;
+	left: 0;
+}
+
+.columnTwo {
+	position: absolute;
+	left: 90px;
+}
+
+.columnThree {
+	position: absolute;
+	left: 180px;
+}
+
+.columnFour {
+	position: absolute;
+	left: 270px;
+}
+
+.columnFive {
+	position: absolute;
+	left: 360px;
+}
+
+.rowOne {
+	position: absolute;
+	top: 0px;
+}
+
+.rowTwo {
+	position: absolute;
+	top: 90px;
+}
+
+.rowThree {
+	position: absolute;
+	top: 180px;
+}
+
+.rowFour {
+	position: absolute;
+	top: 270px;
+}
+
+.rowFive {
+	position: absolute;
+	top: 360px;
+}
+
+.target {
+	background: #000;
+	width: 90px;
+	height: 90px;
+	box-shadow: inset 0 0 5px #f4cd92;
+}
