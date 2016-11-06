@@ -74,6 +74,11 @@ body {
     overflow: hidden;
 }
 
+#welcome p.small {
+    font-size: 10px;
+    line-height: 14px;
+}
+
 #wrapper {
 	position: relative;
 	z-index: 1;
