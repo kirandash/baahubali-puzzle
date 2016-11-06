@@ -4,6 +4,16 @@
 
 		var level = $('body').attr('id');
 
+		if(level == 'level1'){
+			staggerSpeed = 0.5;
+		}else if(level == 'level2'){
+			staggerSpeed = 0.3;
+		}else if(level == 'level3'){
+			staggerSpeed = 0.2;
+		}else if(level == 'level4'){
+			staggerSpeed = 0.1;
+		}
+
 		$('<img/>').attr('src', 'images/'+ level +'/background.jpg').load(function() {
 		   
 		   $(this).remove(); // prevent memory leaks as @benweet suggested
@@ -55,11 +65,11 @@
 				// Stop timeline
 				titleTimeline.stop();
 				// hide welcome
-				titleCloseTimeline.to("#welcome", 0.1, {scale: 0});
+				titleCloseTimeline.to("#welcome", 1, {scale: 0, force3D: true});
 				// show modal
-				titleCloseTimeline.to(".modal", 0.1, {scale: 1, autoAlpha: 1});
+				titleCloseTimeline.to(".modal", 1, {scale: 1, autoAlpha: 1, force3D: true});
 				// load game pieces
-				titleCloseTimeline.staggerTo(".image", 0.2, {opacity: 1, autoAlpha:1, scale: 1, ease: Back.easeOut.config(1.7), force3D: true, onComplete: setTimer, onCompleteParams: [sec] }, 0.05, initDraggableItem());
+				titleCloseTimeline.staggerTo(".image", 0.5, {opacity: 1, autoAlpha:1, scale: 1, ease: Back.easeOut.config(1.7), force3D: true, onComplete: setTimer, onCompleteParams: [sec] }, staggerSpeed, initDraggableItem());
 				
 			}
 
