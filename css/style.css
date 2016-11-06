@@ -47,7 +47,7 @@ table {
 	border-spacing: 0;
 }
 
-/* Home Page */
+/* Pages */
 body, a {
 	font-weight: bold;
     letter-spacing: 5px;
@@ -61,26 +61,6 @@ body, a {
 
 a {
 	text-decoration: none;
-}
-
-body#home {
-	background-image: url(../images/level1/background.jpg);
-}
-
-body#level2 {
-	background-image: url(../images/level2/background.jpg);
-}
-
-body#level3 {
-	background-image: url(../images/level3/background.jpg);
-}
-
-body#level4 {
-	background-image: url(../images/level4/background.jpg);
-}
-
-body#level5 {
-	background-image: url(../images/level5/background.jpg);
 }
 
 body {
@@ -315,6 +295,46 @@ body, p, img, div {
 .nineBoard .image {
 	width: 120px;
 	height: 120px;
+}
+
+/* SIXTEEN BOARD */
+.gameBoard.sixteenBoard {
+    width: 900px;
+    height: 400px;
+}
+
+.sixteenBoard .dragBoard, .sixteenBoard .targetBoard  {
+    width: 400px;
+    height: 400px;
+}
+
+.sixteenBoard .columnTwo {
+    left: 100px;
+}
+
+.sixteenBoard .columnThree {
+    left: 200px;
+}
+
+.sixteenBoard .columnFour {
+    left: 300px;
+}
+
+.sixteenBoard .rowTwo {
+    top: 100px;
+}
+
+.sixteenBoard .rowThree {
+    top: 200px;
+}
+
+.sixteenBoard .rowFour {
+    top: 300px;
+}
+
+.sixteenBoard .image {
+    width: 100px;
+    height: 100px;
 }
 
 /* PRE LOADER */
