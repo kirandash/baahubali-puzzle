@@ -173,13 +173,12 @@
 				location.reload();
 			});
 
-
 			$('.celebrate').magnificPopup({
-			  items: {
+			    items: {
 				     src: youtubeVideo
-			     },
-			  type: 'iframe',
-			  iframe: {
+			    },
+			    type: 'iframe',
+			    iframe: {
 				    	markup: '<div class="mfp-iframe-scaler">'+
 			            		'<div class="mfp-close"></div>'+
 			            		'<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
@@ -192,9 +191,29 @@
 					        }
 					     },
 					     srcAction: 'iframe_src', 
-			     }
-			});
+			    },
+			    callbacks: {
+				    open: function() {
+			      	
+					  $.each($('audio'), function () {
+						  $('audio').get(0).pause();
+						  $('audio').get(0).currentTime = 0;	
+					  });
 
+						
+				      $.magnificPopup.instance.close = function() {
+				        // Stop all the audios on page
+						$.each($('audio'), function () {
+						    $(this).get(0).play();
+						});
+							        
+
+				        // Call the original close method to close the popup
+				        $.magnificPopup.proto.close.call(this);
+				      };
+				    }
+				}
+			});
 
 			initWelcome();
 
