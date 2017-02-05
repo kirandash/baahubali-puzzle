@@ -10,7 +10,7 @@
 			staggerSpeed = 0.3;
 		}else if(level == 'level3'){
 			staggerSpeed = 0.2;
-		}else if(level == 'level4'){
+		}else{
 			staggerSpeed = 0.1;
 		}
 
